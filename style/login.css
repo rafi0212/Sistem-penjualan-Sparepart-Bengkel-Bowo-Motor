@@ -1,0 +1,77 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #CBE1F7;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* center the container horizontally */
+    padding: 200px; /* add some padding inside the container */
+    display: flex;
+    align-items: center; /* center items vertically */
+    background-color: rgb(255, 255, 255); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, rgb(133, 197, 254) 10%, rgb(255, 255, 255)50%);
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+    width: 50%;
+    padding: 20px;
+}
+
+.right-side {
+    width: 50%;
+    padding: 20px;
+}
+
+.login {
+    width: 100%;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px; /* tambahkan padding sesuai keinginan Anda */
+    border: 1px solid #ccc; /* tambahkan border sesuai keinginan Anda */
+    border-radius: 5px; /* tambahkan border-radius sesuai keinginan Anda */
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #52c2ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #36a4ff;
+}
+
+a {
+    text-decoration: none;
+    color: #777;
+}
+
+a:hover {
+    color: #333;
+}

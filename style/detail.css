@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E8E8E8; 
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: calc(100% - 225px); /* Lebar konten dikurangi lebar sidebar */
+    margin-top: 170px; /* Meningkatkan margin top untuk memisahkan konten dari top-bar */
+    margin-left: 225px; /* Mengompensasi lebar sidebar */
+}
+
+/* CSS untuk sidebar */
+#sidebar {
+    width: 225px; /* Lebar sidebar */
+    height: 100%; /* Tinggi sesuai konten */
+    position: fixed; /* Tetap di posisi saat di-scroll */
+    top: 0; /* Letak di atas */
+    left: 0; /* Letak di kiri */
+    background-color: #ffffff; /* Warna latar belakang abu-abu */
+    text-align: left ;
+    overflow-y: auto; /* Aktifkan pengguliran vertikal jika konten lebih panjang dari tinggi sidebar */
+}
+
+#sidebar ul img {
+    display: block; 
+    margin: 0 auto;
+}
+
+/* CSS untuk tautan di sidebar */
+#sidebar ul li a {
+    text-decoration: none; /* Menghilangkan underline pada tautan */
+    color: #000; /* Warna teks */
+    display: block;
+    padding: 15px;
+    padding-left: 60px;
+    transition: background-color 0.3s; /* Efek transisi pada background-color */
+}
+
+
+/* CSS untuk efek hover pada tautan di sidebar */
+#sidebar ul li a:hover {
+    background-color: #007bff; /* Warna latar belakang biru saat hover */
+    color: #fff; /* Warna teks putih saat hover */
+}
+
+/* CSS untuk isi sidebar */
+#sidebar ul {
+    list-style-type: none; /* Menghilangkan tanda bullet pada list */
+    padding: 0;
+}
+
+
+
+.top-bar {
+    position: fixed; /* Tetap di bagian atas saat digulir */
+    top: 0; /* Mentok ke atas */
+    left: 225px; /* Mengompensasi lebar sidebar */
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: space-between; /* Membuat konten berada di ujung kiri dan kanan */
+    align-items: center; /* Mengatur konten secara vertikal di tengah */
+    padding: 10px; /* Padding untuk memberi ruang antara konten dan tepi */
+    background-color: #ffffff90; /* Warna latar belakang top-bar */
+    width: calc(100% - 225px); /* Lebar top-bar dikurangi lebar sidebar */
+    height: 90px; /* Tinggi top-bar */
+    z-index: 2; /* Memastikan top-bar berada di atas konten */
+}
+
+/* CSS untuk konten di dalam top-bar */
+.top-bar h2 {
+    margin: 120px; /* Menghilangkan margin */
+    font-size: 25px; /* Ukuran font */
+}
+
+.top-bar input[type="text"] {
+    margin: 50px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #2d2d2d;
+    font-size: 14px; /* Ukuran font */
+    background-color: #ffffffdc; /* Warna latar belakang input */
+}
+
+.top-bar select {
+    margin-left: 70px; /* Menggeser elemen ke kanan */
+    padding: 8px;
+}
+.top-bar i{
+    margin: 20px;
+    color: #ebdf00;
+}
+
+.top-bar img {
+    margin: 0px;
+    margin-right: 10px; /* Jarak antara elemen */
+}
+
+.user-info {
+    margin-left: 2px; /* Menggeser elemen ke kanan */
+    margin-right: 10px; /* Jarak antara elemen */
+}
+.kepala-table {
+    margin-left: 50px;
+    margin-top: 10px; /* Mengatur ruang atas 10px antara top-bar dan kepala tabel */
+    padding: 20px; /* Menambahkan padding ke kepala tabel */
+    background-color: #ffffff; /* Warna latar belakang kepala tabel */
+    border-radius: 10px; /* Membuat sudut yang lebih lembut */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan untuk efek ketinggian */
+    width: 87%; /* Lebar kepala tabel mengikuti panjang tabel */
+}
+
+
+.kepala-table .kt {
+    padding: 25px;
+    background-color:#5db5fe;
+    display: flex; /* Menggunakan flexbox untuk mengatur tata letak */
+    justify-content: space-between; /* Membuat elemen berada di ujung kiri dan kanan */
+    align-items: center; /* Mengatur elemen secara vertikal di tengah */
+    margin-bottom: 20px; /* Menambahkan ruang bawah antara judul dan tombol */
+}
+
+.kepala-table h2 {
+    font-size: 22px; /* Ukuran font judul */
+    color: #f7f7f7;
+}
+
+
+/* CSS untuk tabel */
+.kepala-table table {
+    margin-top: 10px; /* Tambahkan margin top 20px */
+    width: 100%; /* Lebar tabel 100% dari parent */
+    border-collapse: collapse; /* Menggabungkan border */
+}
+
+.kepala-table th,
+.kepala-table td {
+    border: 1px solid #ddd; /* Border sel dan header */
+    padding: 10px; /* Padding sel */
+}
+
+.kepala-table th {
+    background-color: #f2f2f2; /* Warna latar belakang header */
+    text-align: left; /* Rata kiri teks di header */
+}
+
+.kepala-table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Warna latar belakang baris genap */
+}
+
+.kepala-table tr:hover {
+    background-color: #f2f2f2; /* Warna latar belakang baris saat dihover */
+}
+.detail {
+    margin-left: 10px; /* Adjust the margin as needed */
+}
+
+.card-header {
+    padding: 15px;
+    background-color: #adc0d4;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.card-body {
+    padding: 15px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* CSS untuk tombol Tambah dan Cetak */
+.tambah {
+    background-color: #28a745; /* Hijau */
+    color: #fff; /* Warna font putih */
+    padding: 10px 20px; /* Padding tombol */
+    font-size: 16px; /* Ukuran font */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Membuat sudut yang lebih lembut */
+    cursor: pointer; /* Mengubah kursor saat dihover */
+    text-decoration: none !important; /* Menghapus garis bawah dengan !important */
+    display: inline-block; /* Menampilkan elemen sebagai blok sebaris */
+    transition: background-color 0.3s; /* Efek transisi pada background-color */
+}
+
+.tambah:hover {
+    background-color: #218838; /* Warna latar belakang hijau lebih gelap saat dihover */
+}
+
+.cetak {
+    background-color: #6c757d; /* Abu-abu */
+    color: #fff; /* Warna font putih */
+    padding: 10px 20px; /* Padding tombol */
+    font-size: 16px; /* Ukuran font */
+    border: none; /* Menghapus border */
+    border-radius: 5px; /* Membuat sudut yang lebih lembut */
+    cursor: pointer; /* Mengubah kursor saat dihover */
+    text-decoration: none !important; /* Menghapus garis bawah dengan !important */
+    display: inline-block; /* Menampilkan elemen sebagai blok sebaris */
+    transition: background-color 0.3s; /* Efek transisi pada background-color */
+}
+
+.cetak:hover {
+    background-color: #5a6268; /* Warna latar belakang abu-abu lebih gelap saat dihover */
+}
+/* CSS untuk form input */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Background color for Tambah Detail and Batal */
+.card-header {
+    background-color: #adc0d4;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 10px;
+}
+
+.card-body {
+    background-color: #ffffff;
+    padding: 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E8E8E8; 
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: calc(100% - 225px); /* Lebar konten dikurangi lebar sidebar */
+    margin-top: 170px; /* Meningkatkan margin top untuk memisahkan konten dari top-bar */
+    margin-left: 225px; /* Mengompensasi lebar sidebar */
+}
+
+/* CSS untuk sidebar */
+#sidebar {
+    width: 225px; /* Lebar sidebar */
+    height: 100%; /* Tinggi sesuai konten */
+    position: fixed; /* Tetap di posisi saat di-scroll */
+    top: 0; /* Letak di atas */
+    left: 0; /* Letak di kiri */
+    background-color: #ffffff; /* Warna latar belakang abu-abu */
+    text-align: left ;
+    overflow-y: auto; /* Aktifkan pengguliran vertikal jika konten lebih panjang dari tinggi sidebar */
+}
+
+#sidebar ul img {
+    display: block; 
+    margin: 0 auto;
+}
+
+/* CSS untuk tautan di sidebar */
+#sidebar ul li a {
+    text-decoration: none; /* Menghilangkan underline pada tautan */
+    color: #000; /* Warna teks */
+    display: block;
+    padding: 15px;
+    padding-left: 60px;
+    transition: background-color 0.3s; /* Efek transisi pada background-color */
+}
+
+
+/* CSS untuk efek hover pada tautan di sidebar */
+#sidebar ul li a:hover {
+    background-color: #007bff; /* Warna latar belakang biru saat hover */
+    color: #fff; /* Warna teks putih saat hover */
+}
+
+/* CSS untuk isi sidebar */
+#sidebar ul {
+    list-style-type: none; /* Menghilangkan tanda bullet pada list */
+    padding: 0;
+}
+
+
+.top-bar {
+    position: fixed; /* Tetap di bagian atas saat digulir */
+    top: 0; /* Mentok ke atas */
+    left: 225px; /* Mengompensasi lebar sidebar */
+    display: flex; /* Menggunakan Flexbox */
+    justify-content: space-between; /* Membuat konten berada di ujung kiri dan kanan */
+    align-items: center; /* Mengatur konten secara vertikal di tengah */
+    padding: 10px; /* Padding untuk memberi ruang antara konten dan tepi */
+    background-color: #fdfdfd00; /* Warna latar belakang top-bar */
+    width: calc(100% - 225px); /* Lebar top-bar dikurangi lebar sidebar */
+    height: 90px; /* Tinggi top-bar */
+    z-index: 2; /* Memastikan top-bar berada di atas konten */
+}
+
+/* CSS untuk konten di dalam top-bar */
+.top-bar h2 {
+    margin: 120px; /* Menghilangkan margin */
+    font-size: 25px; /* Ukuran font */
+}
+
+.top-bar input[type="text"] {
+    margin: 50px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #2d2d2d;
+    font-size: 14px; /* Ukuran font */
+    background-color: #ffffffdc; /* Warna latar belakang input */
+}
+
+.top-bar select {
+    margin-left: 70px; /* Menggeser elemen ke kanan */
+    padding: 8px;
+}
+.top-bar i{
+    margin: 20px;
+    color: #ebdf00;
+}
+
+.top-bar img {
+    margin: 0px;
+    margin-right: 10px; /* Jarak antara elemen */
+}
+
+.user-info {
+    margin-left: 2px; /* Menggeser elemen ke kanan */
+    margin-right: 10px; /* Jarak antara elemen */
+}
+
+.row-group {
+    display: flex;
+    flex-wrap: wrap; /* Baris-baris dapat melintasi */
+    justify-content: space-between; /* Memastikan jarak antara row sesuai */
+    align-items: center; /* Mulai penataan dari atas */
+    margin: 20px auto; /* Memberi jarak pada konten dari atas dan bawah */
+    max-width: 1000px; /* Lebar maksimum konten */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Baris-baris dapat melintasi */
+    justify-content: space-between; /* Memastikan jarak antara row sesuai */
+    align-items: center; /* Mulai penataan dari atas */
+    width: 100%; /* Lebar row 100% */
+}
+.green {
+    flex-basis: calc(50% - 20px); /* Mengatur lebar 50% dengan jarak 20px */
+    height: 250px; /* Tinggi row */
+    background: linear-gradient(106.61deg, rgba(7, 255, 121, 0.75) 10.16%, rgba(116, 136, 125, 0.75) 97.38%);
+    box-shadow: 0px 8px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px; /* Mengatur border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    margin-bottom: 20px; /* Jarak antara row */
+    padding: 20px; /* Padding dalam row */
+    box-sizing: border-box; /* Perhitungan box-sizing */
+}
+
+.red {
+    flex-basis: calc(50% - 20px); /* Mengatur lebar 50% dengan jarak 20px */
+    height: 250px; /* Tinggi row */
+    background: linear-gradient(111.33deg, rgba(255, 72, 72, 0.75) 30.86%, rgba(156, 108, 108, 0.75) 86.64%);
+    border-radius: 10px; /* Mengatur border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+    margin-bottom: 20px; /* Jarak antara row merah dengan row biru */
+    padding: 20px; /* Padding dalam row */
+    box-sizing: border-box; /* Perhitungan box-sizing */
+}
+
+.blue {
+    flex-basis: calc(50% - 20px); /* Mengatur lebar 50% dengan jarak 10px */
+    height: 250px;
+    background: linear-gradient(109.11deg, #10A9FF 14.73%, #6D8D9E 88.77%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.yellow {
+    left: calc(50% + 20px);
+    width: calc(50% - 20px);
+    height: 250px;
+    background: linear-gradient(115.49deg, #FFE600 19.92%, #99924F 102.34%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+h2 {
+    margin-bottom: 10px; /* Jarak bottom untuk heading */
+}
+
+h4 {
+    margin-bottom: 5px; /* Jarak bottom untuk sub-heading */
+    background-color: #ffffffdc;
+    padding: 6px;
+    width: 300px;
+    border-radius: 5px;
+    margin-left: auto; 
+    margin-right: auto; 
+    
+}
+
+p {
+    margin: 0; /* Menghilangkan margin */
+}
